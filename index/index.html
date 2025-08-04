@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Register</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex">
+  <main>
+    <h1>Cash Register</h1>
+    <div id="container" class="flex">
+      <div id="cash-drawer">
+        <div id="total" class="absolute"></div>
+        <div id="cid-container" class="flex borders">
+          <div id="sq">
+            <span class="square"></span>
+            <span class="square"></span>
+            <span class="square"></span>
+            <span class="square"></span>
+            <span class="square"></span>
+            <span class="square"></span>
+            <span class="square"></span>
+            <span class="square"></span>
+            <span class="square"></span>
+          </div>
+          <div><h3>Change in Drawer</h3>
+          <button type="button" id="open" class="borders">Open</button></div>
+          <div id="change-in-drawer" class="absolute borders">
+            <div class="change">
+              <div class="units"><strong>Hundreds</strong></div>
+              <div class="img-container"><img src="https://jooinn.com/images/100-dollar-bills-6.jpg" alt=""></div>
+              <span class="amount">$20</span>
+            </div>
+            <div class="change">
+              <div class="units"><strong>Twenties</strong></div>
+              <div class="img-container"><img src="https://www.silverrecyclers.com/uploads/blog-images/2004-20-dollar-bill.jpg" alt=""></div>
+              <span class="amount">$20</span></div>
+            <div class="change">
+              <div class="units"><strong>Tens</strong></div>
+              <div class="img-container"><img src="https://stuffnobodycaresabout.com/wp-content/uploads/2015/06/10-dollar-bill.jpg" alt=""></div>
+              <span class="amount">$20</span></div>
+            <div class="change">
+              <div class="units"><strong>Fives</strong></div>
+              <div class="img-container"><img src="https://www.silverrecyclers.com/uploads/blog-images/1999-5-dollar-bill.jpg" alt=""></div>
+              <span class="amount">$20</span></div>
+            <div class="change">
+              <div class="units"><strong>Ones</strong></div>
+              <div class="img-container"><img src="https://www.silverrecyclers.com/uploads/blog-images/2006-one-dollar-bill.jpg" alt=""></div>
+              <span class="amount">$20</span></div>
+            <div class="change">
+              <div class="units"><strong>Quarters</strong></div>
+              <div class="img-container"><img src="https://img.ma-shops.de/fenzl/pic/105859_ouater.jpg" alt=""></div>
+              <span class="amount">$20</span></div>
+            <div class="change">
+              <div class="units"><strong>Dimes</strong></div>
+              <div class="img-container"><img src="https://www.goldenruleenterprises.org/wp-content/uploads/2022/03/usa-10-cents-1999p-3243890.jpg" alt=""></div>
+              <span class="amount">$20</span></div>
+            <div class="change">
+              <div class="units"><strong>Nickels</strong></div>
+              <div class="img-container"><img src="https://intradefairs.com/sites/default/files/news/nickel.jpg" alt=""></div>
+              <span class="amount">$20</span></div>
+            <div class="change">
+              <div class="units"><strong>Pennies</strong></div>
+              <div class="img-container"><img src="https://cdn.financebuzz.com/images/2016/10/21/pennies_1200x628.jpg" alt=""></div>
+              <span class="amount">$20</span></div>
+            </div>
+          </div>
+        <button type="button" id="next" class="absolute borders">Next ></button>
+      </div>
+      <div id="purchase">
+        <label for="cash">Enter cash from customer: </label>
+        <input id="cash" class="borders" type="number">
+        <div id="remains"></div>
+        <button type="button" id="purchase-btn" class="borders">Purchase</button>
+        <div id="change-due"></div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
