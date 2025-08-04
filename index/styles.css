@@ -1,0 +1,186 @@
+:root{
+  --clr-2: #90e24a;
+  --clr-1: #4adce2;
+  --clr-4: #9c4ae2;
+  --clr-3: #e2504a;
+  --base-width : clamp(5vw, 23rem, 35vw);
+  --white : #fff;
+  --black : #000;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  margin: 0;
+  font-family: lato;
+  color: var(--white);
+  background-color: var(--clr-3);
+}
+main{
+  max-height: 100vh;
+  text-align:center;
+}
+#container{
+  width:clamp(10vw, 40rem, 90vw);
+  gap: 5rem;
+}
+/* cash drawer */
+#cash-drawer{
+  position : relative;
+  color: var(--black);
+}
+#total{
+  width: 8rem;
+  padding:.5rem 1rem;
+  border: 3px solid var(--black);
+  border-left: none;
+  top: .6rem;
+  right: -7.9rem;
+  z-index: 1;
+  font-weight: 600;
+  background-color: var(--clr-2);
+}
+#cid-container{
+  width: var(--base-width);
+  height: 10rem;
+  padding: 1rem;
+  margin-bottom: 18rem;
+  gap: 5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--clr-2);
+}
+#sq{
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .3rem;
+}
+.square{
+  border-radius: .2rem;
+  background-color: var(--black);
+}
+#open{
+  color:var(--white);
+  background-color: var(--clr-4);
+}
+#open:hover{
+  color: var(--clr-4);
+  background-color: var(--white);
+}
+#change-in-drawer{
+  width: var(--base-width);
+  height: fit-content;
+  padding: .5rem;
+  padding-top: 0;
+  gap: .3rem;
+  top: -.2rem;
+  left:-.16rem;
+  z-index: -1;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(3.5rem, 1fr));
+  overflow: hidden;
+  background-color: var(--clr-1);
+}
+.change{
+  height: 8rem;
+  margin-top: .5rem;
+}
+.units{
+  font-size: .8rem;
+}
+.img-container{
+  height: 72%;
+  overflow: hidden;
+  background-color: var(--black);
+}
+img{
+  width: 5rem;
+  transform: rotate(90deg) 
+            translateX(1.7rem) 
+            translateY(.5rem);
+}
+/* End of cash drawer */
+
+/* purchase side */
+#purchase{
+  margin-top: 3rem;
+  position: relative;
+}
+#next{
+  width: 5rem;
+  display:none;
+  top: 7rem;
+  right: -4.8rem;
+  background-color:var(--clr-2);
+}
+#next:hover{
+  color:var(--clr-2);
+  background-color:var(--black);
+}
+
+label{
+  display: block;
+}
+#cash{
+  margin-block:.5rem 1rem;
+  padding: .4rem;
+}
+#cash:focus{
+  outline: none;
+}
+#remains{
+  height:1.5rem;
+}
+#purchase-btn{
+  margin-block: .2rem .5rem;
+  background-color: var(--clr-1);
+}
+#purchase-btn:hover{
+  color: var(--clr-1);
+  background-color: var(--black);
+}
+#change-due{
+  height: 14rem;
+}
+/* End of purchase side */
+
+/* common styles */
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.absolute{
+  position: absolute;
+}
+.borders{
+  border: 3px solid var(--black);
+  border-radius: 1rem;
+}
+button{
+  padding: .5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width:620px){
+  :root{
+    --base-width: clamp(3vw, 23rem, 90vw);
+  }
+  #container{
+    flex-direction: column-reverse;
+  }
+  #total{
+    border: none;
+    top: 5rem;
+    left: .2rem;
+  }
+  #next{
+    top: -2.3rem;
+    right: 8rem;
+  }
+}
